@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // Định nghĩa route để trả về thẻ Open Graph
-app.get('/mobile-app', (req, res) => {
+app.get('/', (req, res) => {
     // Lấy tiêu đề từ query parameter, mặc định là "CFA99 - Landing Page" nếu không có
     const ogTitle = req.query.title || "CFA99";
     const ogDescription = "Đây là website CFA99, trang landing page cho sản phẩm của chúng tôi.";
