@@ -8,17 +8,17 @@ const port = 3000;
 app.get('/', (req, res) => {
     // Lấy tiêu đề từ query parameter, mặc định là "CFA99 - Landing Page" nếu không có
     const ogTitle = req.query.title || "CFA99 - Nền tảng phân tích cổ phiếu #1 Việt Nam";
-    const ogDescription = "CFA99 - Nền tảng phân tích cổ phiếu #1 Việt Nam.";
-    const ogUrl = "https://cfa99-landing-page.vercel.app/";
+    const ogImage = req.query.image || "https://res.cloudinary.com/dysdlnnis/image/upload/v1754359649/4ffa7fc5de574a2e081b9990f2041c1921905f1d_nldnda.jpg"
+    const ogUrl = "https://cfa99-landing-page.vercel.app";
     const htmlResponse = `
     <!DOCTYPE html>
     <html lang="vi">
     <head>
         <meta charset="UTF-8">
         <title>${ogTitle}</title>
-        <meta property="og:title" content="${ogTitle}" />
-        <meta property="og:description" content="${ogDescription}" />
-        <meta property="og:image" content="https://res.cloudinary.com/dysdlnnis/image/upload/v1754359649/4ffa7fc5de574a2e081b9990f2041c1921905f1d_nldnda.jpg" />
+        <meta property="og:title" content="Tin nóng hôm nay" />
+        <meta property="og:description" content="${ogTitle}" />
+        <meta property="og:image" content="${ogImage}" />
         <meta property="og:url" content="${ogUrl}" />
         <meta property="og:type" content="website" />
         <meta http-equiv="refresh" content="0; url=${ogUrl}">
