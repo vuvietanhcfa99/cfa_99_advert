@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
         <meta property="og:image" content="${ogImage}" />
         <meta property="og:url" content="${ogUrl}" />
         <meta property="og:type" content="website" />
-        <meta http-equiv="refresh" content="0; url=${ogUrl}">
         <script type="text/javascript">
             var webFallbackUrl = "https://cfa99-landing-page.vercel.app";
 
