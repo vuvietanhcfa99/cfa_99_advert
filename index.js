@@ -8,7 +8,7 @@ const port = 3000;
 app.get('/', (req, res) => {
     const ogTitle =req.query.type == '1' ? 'Phân tích cổ phiếu bằng A.I': 'Tin nóng hôm nay';
     const ogDes = req.query.title || "CFA99 - Nền tảng phân tích cổ phiếu #1 Việt Nam";
-    const ogImage = req.query.type == '1' ? "https://res.cloudinary.com/dysdlnnis/image/upload/v1754635532/z6885622285022_51bbad4ccecddbd60678d712bdcd04da_hq8jdx.jpg" : req.query.image || "https://res.cloudinary.com/dysdlnnis/image/upload/v1754359649/4ffa7fc5de574a2e081b9990f2041c1921905f1d_nldnda.jpg"
+    const ogImage = req.query.type == '1' ? "https://res.cloudinary.com/dysdlnnis/image/upload/v1754635532/z6885622285022_51bbad4ccecddbd60678d712bdcd04da_hq8jdx.jpg" : `https://res.cloudinary.com/dysdlnnis/image/upload/${req.query.image}` || "https://res.cloudinary.com/dysdlnnis/image/upload/v1754359649/4ffa7fc5de574a2e081b9990f2041c1921905f1d_nldnda.jpg"
     const ogUrl = "https://cfa99-landing-page.vercel.app";
     const htmlResponse = `
     <!DOCTYPE html>
